@@ -44,8 +44,8 @@ localparam int X2_W = X2_I + X2_F;
 typedef logic [X2_W-1:0] x2_t;
 
 // Coefficient a 
-localparam int A_I = 2;
-localparam int A_F = 22;
+localparam int A_I = 1;
+localparam int A_F = 23;
 localparam int A_W = A_I + A_F;
 
 typedef logic signed [A_W-1:0] a_t;

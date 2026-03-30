@@ -103,7 +103,7 @@ void testQuadra(Vquadra_top* top, VerilatedVcdC* trace_fp, std::deque<x_fxd_t>& 
 {
     using namespace std;
 
-    uint32_t x_start = 0xfffff0;
+    uint32_t x_start = 0x000000;
     uint32_t x_stop  = 0xffffff;
     uint32_t x_step  = 0x000001;
 

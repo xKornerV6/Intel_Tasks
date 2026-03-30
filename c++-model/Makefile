@@ -35,7 +35,7 @@ CXXFLAGS += -O3
 endif
 
 # Disable all cout by default:
-DBG_ALL = 1
+DBG_ALL = 0
 DBG_OUT = 0
 DBG_TST = 0
 
