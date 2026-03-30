@@ -1,0 +1,480 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Design implementation internals
+// See Vquadra_top.h for the primary calling header
+
+#include "Vquadra_top.h"
+#include "Vquadra_top__Syms.h"
+
+//==========
+IData/*23:0*/ Vquadra_top::__Vtable1_quadra_top__DOT__a_lut[128];
+IData/*18:0*/ Vquadra_top::__Vtable2_quadra_top__DOT__b_lut[128];
+SData/*12:0*/ Vquadra_top::__Vtable3_quadra_top__DOT__c_lut[128];
+
+VL_CTOR_IMP(Vquadra_top) {
+    Vquadra_top__Syms* __restrict vlSymsp = __VlSymsp = new Vquadra_top__Syms(this, name());
+    Vquadra_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Reset internal values
+    
+    // Reset structure values
+    _ctor_var_reset();
+}
+
+void Vquadra_top::__Vconfigure(Vquadra_top__Syms* vlSymsp, bool first) {
+    if (false && first) {}  // Prevent unused
+    this->__VlSymsp = vlSymsp;
+    if (false && this->__VlSymsp) {}  // Prevent unused
+    Verilated::timeunit(-12);
+    Verilated::timeprecision(-12);
+}
+
+Vquadra_top::~Vquadra_top() {
+    VL_DO_CLEAR(delete __VlSymsp, __VlSymsp = NULL);
+}
+
+void Vquadra_top::_settle__TOP__2(Vquadra_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vquadra_top::_settle__TOP__2\n"); );
+    Vquadra_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->__Vtableidx1 = (0x7fU & (vlTOPp->x >> 0x11U));
+    vlTOPp->quadra_top__DOT__a_lut = vlTOPp->__Vtable1_quadra_top__DOT__a_lut
+        [vlTOPp->__Vtableidx1];
+    vlTOPp->__Vtableidx2 = (0x7fU & (vlTOPp->x >> 0x11U));
+    vlTOPp->quadra_top__DOT__b_lut = vlTOPp->__Vtable2_quadra_top__DOT__b_lut
+        [vlTOPp->__Vtableidx2];
+    vlTOPp->__Vtableidx3 = (0x7fU & (vlTOPp->x >> 0x11U));
+    vlTOPp->quadra_top__DOT__c_lut = vlTOPp->__Vtable3_quadra_top__DOT__c_lut
+        [vlTOPp->__Vtableidx3];
+    vlTOPp->y_dv = vlTOPp->quadra_top__DOT__dv_p0;
+}
+
+void Vquadra_top::_eval_initial(Vquadra_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vquadra_top::_eval_initial\n"); );
+    Vquadra_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
+}
+
+void Vquadra_top::final() {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vquadra_top::final\n"); );
+    // Variables
+    Vquadra_top__Syms* __restrict vlSymsp = this->__VlSymsp;
+    Vquadra_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+}
+
+void Vquadra_top::_eval_settle(Vquadra_top__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vquadra_top::_eval_settle\n"); );
+    Vquadra_top* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->_settle__TOP__2(vlSymsp);
+    vlTOPp->__Vm_traceActivity[2U] = 1U;
+    vlTOPp->__Vm_traceActivity[1U] = 1U;
+    vlTOPp->__Vm_traceActivity[0U] = 1U;
+}
+
+void Vquadra_top::_ctor_var_reset() {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vquadra_top::_ctor_var_reset\n"); );
+    // Body
+    clk = VL_RAND_RESET_I(1);
+    rst_b = VL_RAND_RESET_I(1);
+    x = VL_RAND_RESET_I(24);
+    x_dv = VL_RAND_RESET_I(1);
+    y = VL_RAND_RESET_I(25);
+    y_dv = VL_RAND_RESET_I(1);
+    quadra_top__DOT__dv_p0 = VL_RAND_RESET_I(1);
+    quadra_top__DOT__dv_p1 = VL_RAND_RESET_I(1);
+    quadra_top__DOT__dv_p2 = VL_RAND_RESET_I(1);
+    quadra_top__DOT__x2_q = VL_RAND_RESET_I(17);
+    quadra_top__DOT__a_lut = VL_RAND_RESET_I(24);
+    quadra_top__DOT__b_lut = VL_RAND_RESET_I(19);
+    quadra_top__DOT__c_lut = VL_RAND_RESET_I(13);
+    __Vtableidx1 = 0;
+    __Vtable1_quadra_top__DOT__a_lut[0] = 0xd2b2c3U;
+    __Vtable1_quadra_top__DOT__a_lut[1] = 0xd42e7aU;
+    __Vtable1_quadra_top__DOT__a_lut[2] = 0xd5a8f4U;
+    __Vtable1_quadra_top__DOT__a_lut[3] = 0xd72fdbU;
+    __Vtable1_quadra_top__DOT__a_lut[4] = 0xd8be61U;
+    __Vtable1_quadra_top__DOT__a_lut[5] = 0xda5412U;
+    __Vtable1_quadra_top__DOT__a_lut[6] = 0xdbf0ccU;
+    __Vtable1_quadra_top__DOT__a_lut[7] = 0xdd9437U;
+    __Vtable1_quadra_top__DOT__a_lut[8] = 0xdf3e25U;
+    __Vtable1_quadra_top__DOT__a_lut[9] = 0xe0ee7aU;
+    __Vtable1_quadra_top__DOT__a_lut[10] = 0xe2a4faU;
+    __Vtable1_quadra_top__DOT__a_lut[11] = 0xe4617cU;
+    __Vtable1_quadra_top__DOT__a_lut[12] = 0xe62389U;
+    __Vtable1_quadra_top__DOT__a_lut[13] = 0xe7ef93U;
+    __Vtable1_quadra_top__DOT__a_lut[14] = 0xe9c08cU;
+    __Vtable1_quadra_top__DOT__a_lut[15] = 0xeb9626U;
+    __Vtable1_quadra_top__DOT__a_lut[16] = 0xed7000U;
+    __Vtable1_quadra_top__DOT__a_lut[17] = 0xef4d9cU;
+    __Vtable1_quadra_top__DOT__a_lut[18] = 0xf12f9cU;
+    __Vtable1_quadra_top__DOT__a_lut[19] = 0xf3152fU;
+    __Vtable1_quadra_top__DOT__a_lut[20] = 0xf500fdU;
+    __Vtable1_quadra_top__DOT__a_lut[21] = 0xf6f141U;
+    __Vtable1_quadra_top__DOT__a_lut[22] = 0xf8e714U;
+    __Vtable1_quadra_top__DOT__a_lut[23] = 0xfadbdaU;
+    __Vtable1_quadra_top__DOT__a_lut[24] = 0xfcd6c4U;
+    __Vtable1_quadra_top__DOT__a_lut[25] = 0xfef679U;
+    __Vtable1_quadra_top__DOT__a_lut[26] = 0x11bc5U;
+    __Vtable1_quadra_top__DOT__a_lut[27] = 0x34659U;
+    __Vtable1_quadra_top__DOT__a_lut[28] = 0x575f7U;
+    __Vtable1_quadra_top__DOT__a_lut[29] = 0x7aa6dU;
+    __Vtable1_quadra_top__DOT__a_lut[30] = 0x9e3e4U;
+    __Vtable1_quadra_top__DOT__a_lut[31] = 0xc2261U;
+    __Vtable1_quadra_top__DOT__a_lut[32] = 0xe65daU;
+    __Vtable1_quadra_top__DOT__a_lut[33] = 0x10adceU;
+    __Vtable1_quadra_top__DOT__a_lut[34] = 0x12fabcU;
+    __Vtable1_quadra_top__DOT__a_lut[35] = 0x154ca2U;
+    __Vtable1_quadra_top__DOT__a_lut[36] = 0x17a306U;
+    __Vtable1_quadra_top__DOT__a_lut[37] = 0x19fdcaU;
+    __Vtable1_quadra_top__DOT__a_lut[38] = 0x1c5cd2U;
+    __Vtable1_quadra_top__DOT__a_lut[39] = 0x1ec011U;
+    __Vtable1_quadra_top__DOT__a_lut[40] = 0x212765U;
+    __Vtable1_quadra_top__DOT__a_lut[41] = 0x2392ccU;
+    __Vtable1_quadra_top__DOT__a_lut[42] = 0x260220U;
+    __Vtable1_quadra_top__DOT__a_lut[43] = 0x287531U;
+    __Vtable1_quadra_top__DOT__a_lut[44] = 0x2aebcbU;
+    __Vtable1_quadra_top__DOT__a_lut[45] = 0x2d65d4U;
+    __Vtable1_quadra_top__DOT__a_lut[46] = 0x2fe329U;
+    __Vtable1_quadra_top__DOT__a_lut[47] = 0x3263ceU;
+    __Vtable1_quadra_top__DOT__a_lut[48] = 0x34e78fU;
+    __Vtable1_quadra_top__DOT__a_lut[49] = 0x376e36U;
+    __Vtable1_quadra_top__DOT__a_lut[50] = 0x39f7a9U;
+    __Vtable1_quadra_top__DOT__a_lut[51] = 0x3c838cU;
+    __Vtable1_quadra_top__DOT__a_lut[52] = 0x3f11adU;
+    __Vtable1_quadra_top__DOT__a_lut[53] = 0x41a183U;
+    __Vtable1_quadra_top__DOT__a_lut[54] = 0x4432c9U;
+    __Vtable1_quadra_top__DOT__a_lut[55] = 0x46c58bU;
+    __Vtable1_quadra_top__DOT__a_lut[56] = 0x495999U;
+    __Vtable1_quadra_top__DOT__a_lut[57] = 0x4beea8U;
+    __Vtable1_quadra_top__DOT__a_lut[58] = 0x4e84edU;
+    __Vtable1_quadra_top__DOT__a_lut[59] = 0x511bd6U;
+    __Vtable1_quadra_top__DOT__a_lut[60] = 0x53b384U;
+    __Vtable1_quadra_top__DOT__a_lut[61] = 0x564addU;
+    __Vtable1_quadra_top__DOT__a_lut[62] = 0x58e2eeU;
+    __Vtable1_quadra_top__DOT__a_lut[63] = 0x5b7b9cU;
+    __Vtable1_quadra_top__DOT__a_lut[64] = 0x5e150cU;
+    __Vtable1_quadra_top__DOT__a_lut[65] = 0x60af09U;
+    __Vtable1_quadra_top__DOT__a_lut[66] = 0x63497fU;
+    __Vtable1_quadra_top__DOT__a_lut[67] = 0x65e441U;
+    __Vtable1_quadra_top__DOT__a_lut[68] = 0x687f1dU;
+    __Vtable1_quadra_top__DOT__a_lut[69] = 0x6b19f2U;
+    __Vtable1_quadra_top__DOT__a_lut[70] = 0x6db4c6U;
+    __Vtable1_quadra_top__DOT__a_lut[71] = 0x704f60U;
+    __Vtable1_quadra_top__DOT__a_lut[72] = 0x72e9d6U;
+    __Vtable1_quadra_top__DOT__a_lut[73] = 0x7583e3U;
+    __Vtable1_quadra_top__DOT__a_lut[74] = 0x781da1U;
+    __Vtable1_quadra_top__DOT__a_lut[75] = 0x7ab6e8U;
+    __Vtable1_quadra_top__DOT__a_lut[76] = 0x7d4f91U;
+    __Vtable1_quadra_top__DOT__a_lut[77] = 0x7fe791U;
+    __Vtable1_quadra_top__DOT__a_lut[78] = 0x827ed7U;
+    __Vtable1_quadra_top__DOT__a_lut[79] = 0x851530U;
+    __Vtable1_quadra_top__DOT__a_lut[80] = 0x87aaa0U;
+    __Vtable1_quadra_top__DOT__a_lut[81] = 0x8a3f01U;
+    __Vtable1_quadra_top__DOT__a_lut[82] = 0x8cd230U;
+    __Vtable1_quadra_top__DOT__a_lut[83] = 0x8f6415U;
+    __Vtable1_quadra_top__DOT__a_lut[84] = 0x91f490U;
+    __Vtable1_quadra_top__DOT__a_lut[85] = 0x948386U;
+    __Vtable1_quadra_top__DOT__a_lut[86] = 0x9710d4U;
+    __Vtable1_quadra_top__DOT__a_lut[87] = 0x999c6bU;
+    __Vtable1_quadra_top__DOT__a_lut[88] = 0x9c2635U;
+    __Vtable1_quadra_top__DOT__a_lut[89] = 0x9eae23U;
+    __Vtable1_quadra_top__DOT__a_lut[90] = 0xa13410U;
+    __Vtable1_quadra_top__DOT__a_lut[91] = 0xa3b7f2U;
+    __Vtable1_quadra_top__DOT__a_lut[92] = 0xa639b0U;
+    __Vtable1_quadra_top__DOT__a_lut[93] = 0xa8b933U;
+    __Vtable1_quadra_top__DOT__a_lut[94] = 0xab366aU;
+    __Vtable1_quadra_top__DOT__a_lut[95] = 0xadb147U;
+    __Vtable1_quadra_top__DOT__a_lut[96] = 0xb029a1U;
+    __Vtable1_quadra_top__DOT__a_lut[97] = 0xb29f62U;
+    __Vtable1_quadra_top__DOT__a_lut[98] = 0xb51283U;
+    __Vtable1_quadra_top__DOT__a_lut[99] = 0xb782daU;
+    __Vtable1_quadra_top__DOT__a_lut[100] = 0xb9f050U;
+    __Vtable1_quadra_top__DOT__a_lut[101] = 0xc25ad6U;
+    __Vtable1_quadra_top__DOT__a_lut[102] = 0xc4c220U;
+    __Vtable1_quadra_top__DOT__a_lut[103] = 0xc72643U;
+    __Vtable1_quadra_top__DOT__a_lut[104] = 0xc98725U;
+    __Vtable1_quadra_top__DOT__a_lut[105] = 0xcbe4a0U;
+    __Vtable1_quadra_top__DOT__a_lut[106] = 0xce3ebdU;
+    __Vtable1_quadra_top__DOT__a_lut[107] = 0xd0957bU;
+    __Vtable1_quadra_top__DOT__a_lut[108] = 0xd2e8c2U;
+    __Vtable1_quadra_top__DOT__a_lut[109] = 0xd5388dU;
+    __Vtable1_quadra_top__DOT__a_lut[110] = 0xd784c6U;
+    __Vtable1_quadra_top__DOT__a_lut[111] = 0xd9cd58U;
+    __Vtable1_quadra_top__DOT__a_lut[112] = 0xdc123dU;
+    __Vtable1_quadra_top__DOT__a_lut[113] = 0xde5351U;
+    __Vtable1_quadra_top__DOT__a_lut[114] = 0xe0908cU;
+    __Vtable1_quadra_top__DOT__a_lut[115] = 0xe2c9d6U;
+    __Vtable1_quadra_top__DOT__a_lut[116] = 0xe4ff25U;
+    __Vtable1_quadra_top__DOT__a_lut[117] = 0xe73067U;
+    __Vtable1_quadra_top__DOT__a_lut[118] = 0xe95da1U;
+    __Vtable1_quadra_top__DOT__a_lut[119] = 0xeb86cfU;
+    __Vtable1_quadra_top__DOT__a_lut[120] = 0xdbab20U;
+    __Vtable1_quadra_top__DOT__a_lut[121] = 0xddcd4eU;
+    __Vtable1_quadra_top__DOT__a_lut[122] = 0xffecd3U;
+    __Vtable1_quadra_top__DOT__a_lut[123] = 0x208b0U;
+    __Vtable1_quadra_top__DOT__a_lut[124] = 0x41ff3U;
+    __Vtable1_quadra_top__DOT__a_lut[125] = 0x6322aU;
+    __Vtable1_quadra_top__DOT__a_lut[126] = 0xfb3d9cU;
+    __Vtable1_quadra_top__DOT__a_lut[127] = 0xfd5406U;
+    __Vtableidx2 = 0;
+    __Vtable2_quadra_top__DOT__b_lut[0] = 0x16a0aU;
+    __Vtable2_quadra_top__DOT__b_lut[1] = 0x17530U;
+    __Vtable2_quadra_top__DOT__b_lut[2] = 0x17ffdU;
+    __Vtable2_quadra_top__DOT__b_lut[3] = 0x18a5bU;
+    __Vtable2_quadra_top__DOT__b_lut[4] = 0x1945fU;
+    __Vtable2_quadra_top__DOT__b_lut[5] = 0x19e08U;
+    __Vtable2_quadra_top__DOT__b_lut[6] = 0x1a72aU;
+    __Vtable2_quadra_top__DOT__b_lut[7] = 0x1aff4U;
+    __Vtable2_quadra_top__DOT__b_lut[8] = 0x1b85eU;
+    __Vtable2_quadra_top__DOT__b_lut[9] = 0x1c051U;
+    __Vtable2_quadra_top__DOT__b_lut[10] = 0x1c7d3U;
+    __Vtable2_quadra_top__DOT__b_lut[11] = 0x1ceddU;
+    __Vtable2_quadra_top__DOT__b_lut[12] = 0x1d580U;
+    __Vtable2_quadra_top__DOT__b_lut[13] = 0x1dba1U;
+    __Vtable2_quadra_top__DOT__b_lut[14] = 0x1e14eU;
+    __Vtable2_quadra_top__DOT__b_lut[15] = 0x1e68bU;
+    __Vtable2_quadra_top__DOT__b_lut[16] = 0x1eb49U;
+    __Vtable2_quadra_top__DOT__b_lut[17] = 0x1efa1U;
+    __Vtable2_quadra_top__DOT__b_lut[18] = 0x1f389U;
+    __Vtable2_quadra_top__DOT__b_lut[19] = 0x1f6e1U;
+    __Vtable2_quadra_top__DOT__b_lut[20] = 0x1f9b9U;
+    __Vtable2_quadra_top__DOT__b_lut[21] = 0x1fbe6U;
+    __Vtable2_quadra_top__DOT__b_lut[22] = 0x1fd96U;
+    __Vtable2_quadra_top__DOT__b_lut[23] = 0x1fedeU;
+    __Vtable2_quadra_top__DOT__b_lut[24] = 0x1ffb0U;
+    __Vtable2_quadra_top__DOT__b_lut[25] = 0x20000U;
+    __Vtable2_quadra_top__DOT__b_lut[26] = 0x1ff91U;
+    __Vtable2_quadra_top__DOT__b_lut[27] = 0x1feafU;
+    __Vtable2_quadra_top__DOT__b_lut[28] = 0x1fd5eU;
+    __Vtable2_quadra_top__DOT__b_lut[29] = 0x1fb96U;
+    __Vtable2_quadra_top__DOT__b_lut[30] = 0x1f95aU;
+    __Vtable2_quadra_top__DOT__b_lut[31] = 0x1f6aaU;
+    __Vtable2_quadra_top__DOT__b_lut[32] = 0x1f385U;
+    __Vtable2_quadra_top__DOT__b_lut[33] = 0x1f005U;
+    __Vtable2_quadra_top__DOT__b_lut[34] = 0x1ebfcU;
+    __Vtable2_quadra_top__DOT__b_lut[35] = 0x1e765U;
+    __Vtable2_quadra_top__DOT__b_lut[36] = 0x1e263U;
+    __Vtable2_quadra_top__DOT__b_lut[37] = 0x1dd13U;
+    __Vtable2_quadra_top__DOT__b_lut[38] = 0x1d743U;
+    __Vtable2_quadra_top__DOT__b_lut[39] = 0x1d125U;
+    __Vtable2_quadra_top__DOT__b_lut[40] = 0x1caa6U;
+    __Vtable2_quadra_top__DOT__b_lut[41] = 0x1c3f3U;
+    __Vtable2_quadra_top__DOT__b_lut[42] = 0x1bcfaU;
+    __Vtable2_quadra_top__DOT__b_lut[43] = 0x1b5bcU;
+    __Vtable2_quadra_top__DOT__b_lut[44] = 0x1ae3aU;
+    __Vtable2_quadra_top__DOT__b_lut[45] = 0x1a677U;
+    __Vtable2_quadra_top__DOT__b_lut[46] = 0x19e7aU;
+    __Vtable2_quadra_top__DOT__b_lut[47] = 0x1964aU;
+    __Vtable2_quadra_top__DOT__b_lut[48] = 0x18de3U;
+    __Vtable2_quadra_top__DOT__b_lut[49] = 0x1855aU;
+    __Vtable2_quadra_top__DOT__b_lut[50] = 0x17c9bU;
+    __Vtable2_quadra_top__DOT__b_lut[51] = 0x173b2U;
+    __Vtable2_quadra_top__DOT__b_lut[52] = 0x16aa0U;
+    __Vtable2_quadra_top__DOT__b_lut[53] = 0x16174U;
+    __Vtable2_quadra_top__DOT__b_lut[54] = 0x1582eU;
+    __Vtable2_quadra_top__DOT__b_lut[55] = 0x14ec9U;
+    __Vtable2_quadra_top__DOT__b_lut[56] = 0x1454cU;
+    __Vtable2_quadra_top__DOT__b_lut[57] = 0x13bbdU;
+    __Vtable2_quadra_top__DOT__b_lut[58] = 0x13214U;
+    __Vtable2_quadra_top__DOT__b_lut[59] = 0x12852U;
+    __Vtable2_quadra_top__DOT__b_lut[60] = 0x11e73U;
+    __Vtable2_quadra_top__DOT__b_lut[61] = 0x1147aU;
+    __Vtable2_quadra_top__DOT__b_lut[62] = 0x10a68U;
+    __Vtable2_quadra_top__DOT__b_lut[63] = 0x1003dU;
+    __Vtable2_quadra_top__DOT__b_lut[64] = 0xf5faU;
+    __Vtable2_quadra_top__DOT__b_lut[65] = 0xeb9eU;
+    __Vtable2_quadra_top__DOT__b_lut[66] = 0xe12dU;
+    __Vtable2_quadra_top__DOT__b_lut[67] = 0xd6a4U;
+    __Vtable2_quadra_top__DOT__b_lut[68] = 0xcc04U;
+    __Vtable2_quadra_top__DOT__b_lut[69] = 0xc14cU;
+    __Vtable2_quadra_top__DOT__b_lut[70] = 0xb67fU;
+    __Vtable2_quadra_top__DOT__b_lut[71] = 0xab9bU;
+    __Vtable2_quadra_top__DOT__b_lut[72] = 0xa0a4U;
+    __Vtable2_quadra_top__DOT__b_lut[73] = 0x9598U;
+    __Vtable2_quadra_top__DOT__b_lut[74] = 0x8a79U;
+    __Vtable2_quadra_top__DOT__b_lut[75] = 0x7f4aU;
+    __Vtable2_quadra_top__DOT__b_lut[76] = 0x740aU;
+    __Vtable2_quadra_top__DOT__b_lut[77] = 0x68bdU;
+    __Vtable2_quadra_top__DOT__b_lut[78] = 0x5d63U;
+    __Vtable2_quadra_top__DOT__b_lut[79] = 0x51feU;
+    __Vtable2_quadra_top__DOT__b_lut[80] = 0x4690U;
+    __Vtable2_quadra_top__DOT__b_lut[81] = 0x3b1eU;
+    __Vtable2_quadra_top__DOT__b_lut[82] = 0x2fbdU;
+    __Vtable2_quadra_top__DOT__b_lut[83] = 0x245eU;
+    __Vtable2_quadra_top__DOT__b_lut[84] = 0x1901U;
+    __Vtable2_quadra_top__DOT__b_lut[85] = 0xda8U;
+    __Vtable2_quadra_top__DOT__b_lut[86] = 0x257U;
+    __Vtable2_quadra_top__DOT__b_lut[87] = 0x7f70bU;
+    __Vtable2_quadra_top__DOT__b_lut[88] = 0x7ebc9U;
+    __Vtable2_quadra_top__DOT__b_lut[89] = 0x7e096U;
+    __Vtable2_quadra_top__DOT__b_lut[90] = 0x7d576U;
+    __Vtable2_quadra_top__DOT__b_lut[91] = 0x7ca71U;
+    __Vtable2_quadra_top__DOT__b_lut[92] = 0x7bf8aU;
+    __Vtable2_quadra_top__DOT__b_lut[93] = 0x7b4c4U;
+    __Vtable2_quadra_top__DOT__b_lut[94] = 0x7aa23U;
+    __Vtable2_quadra_top__DOT__b_lut[95] = 0x79fa9U;
+    __Vtable2_quadra_top__DOT__b_lut[96] = 0x7955bU;
+    __Vtable2_quadra_top__DOT__b_lut[97] = 0x78b3eU;
+    __Vtable2_quadra_top__DOT__b_lut[98] = 0x78152U;
+    __Vtable2_quadra_top__DOT__b_lut[99] = 0x7779dU;
+    __Vtable2_quadra_top__DOT__b_lut[100] = 0x76e21U;
+    __Vtable2_quadra_top__DOT__b_lut[101] = 0x764e1U;
+    __Vtable2_quadra_top__DOT__b_lut[102] = 0x75bdcU;
+    __Vtable2_quadra_top__DOT__b_lut[103] = 0x75319U;
+    __Vtable2_quadra_top__DOT__b_lut[104] = 0x74a9bU;
+    __Vtable2_quadra_top__DOT__b_lut[105] = 0x7426aU;
+    __Vtable2_quadra_top__DOT__b_lut[106] = 0x73a87U;
+    __Vtable2_quadra_top__DOT__b_lut[107] = 0x732f4U;
+    __Vtable2_quadra_top__DOT__b_lut[108] = 0x72bc2U;
+    __Vtable2_quadra_top__DOT__b_lut[109] = 0x724f2U;
+    __Vtable2_quadra_top__DOT__b_lut[110] = 0x71e84U;
+    __Vtable2_quadra_top__DOT__b_lut[111] = 0x7187cU;
+    __Vtable2_quadra_top__DOT__b_lut[112] = 0x712dcU;
+    __Vtable2_quadra_top__DOT__b_lut[113] = 0x70db6U;
+    __Vtable2_quadra_top__DOT__b_lut[114] = 0x70908U;
+    __Vtable2_quadra_top__DOT__b_lut[115] = 0x704d6U;
+    __Vtable2_quadra_top__DOT__b_lut[116] = 0x70124U;
+    __Vtable2_quadra_top__DOT__b_lut[117] = 0x6fdefU;
+    __Vtable2_quadra_top__DOT__b_lut[118] = 0x6fb3fU;
+    __Vtable2_quadra_top__DOT__b_lut[119] = 0x6f94bU;
+    __Vtable2_quadra_top__DOT__b_lut[120] = 0x7e15eU;
+    __Vtable2_quadra_top__DOT__b_lut[121] = 0x7bd70U;
+    __Vtable2_quadra_top__DOT__b_lut[122] = 0x79943U;
+    __Vtable2_quadra_top__DOT__b_lut[123] = 0x774dbU;
+    __Vtable2_quadra_top__DOT__b_lut[124] = 0x75043U;
+    __Vtable2_quadra_top__DOT__b_lut[125] = 0x72bb2U;
+    __Vtable2_quadra_top__DOT__b_lut[126] = 0x40039U;
+    __Vtable2_quadra_top__DOT__b_lut[127] = 0x60072U;
+    __Vtableidx3 = 0;
+    __Vtable3_quadra_top__DOT__c_lut[0] = 0xb50U;
+    __Vtable3_quadra_top__DOT__c_lut[1] = 0xaf4U;
+    __Vtable3_quadra_top__DOT__c_lut[2] = 0xa96U;
+    __Vtable3_quadra_top__DOT__c_lut[3] = 0xa34U;
+    __Vtable3_quadra_top__DOT__c_lut[4] = 0x9d1U;
+    __Vtable3_quadra_top__DOT__c_lut[5] = 0x96aU;
+    __Vtable3_quadra_top__DOT__c_lut[6] = 0x902U;
+    __Vtable3_quadra_top__DOT__c_lut[7] = 0x897U;
+    __Vtable3_quadra_top__DOT__c_lut[8] = 0x82aU;
+    __Vtable3_quadra_top__DOT__c_lut[9] = 0x7bbU;
+    __Vtable3_quadra_top__DOT__c_lut[10] = 0x74aU;
+    __Vtable3_quadra_top__DOT__c_lut[11] = 0x6d7U;
+    __Vtable3_quadra_top__DOT__c_lut[12] = 0x662U;
+    __Vtable3_quadra_top__DOT__c_lut[13] = 0x5ecU;
+    __Vtable3_quadra_top__DOT__c_lut[14] = 0x575U;
+    __Vtable3_quadra_top__DOT__c_lut[15] = 0x4fbU;
+    __Vtable3_quadra_top__DOT__c_lut[16] = 0x481U;
+    __Vtable3_quadra_top__DOT__c_lut[17] = 0x406U;
+    __Vtable3_quadra_top__DOT__c_lut[18] = 0x389U;
+    __Vtable3_quadra_top__DOT__c_lut[19] = 0x30cU;
+    __Vtable3_quadra_top__DOT__c_lut[20] = 0x28eU;
+    __Vtable3_quadra_top__DOT__c_lut[21] = 0x20fU;
+    __Vtable3_quadra_top__DOT__c_lut[22] = 0x190U;
+    __Vtable3_quadra_top__DOT__c_lut[23] = 0x111U;
+    __Vtable3_quadra_top__DOT__c_lut[24] = 0x91U;
+    __Vtable3_quadra_top__DOT__c_lut[25] = 0x11U;
+    __Vtable3_quadra_top__DOT__c_lut[26] = 0x1f91U;
+    __Vtable3_quadra_top__DOT__c_lut[27] = 0x1f11U;
+    __Vtable3_quadra_top__DOT__c_lut[28] = 0x1e91U;
+    __Vtable3_quadra_top__DOT__c_lut[29] = 0x1e11U;
+    __Vtable3_quadra_top__DOT__c_lut[30] = 0x1d91U;
+    __Vtable3_quadra_top__DOT__c_lut[31] = 0x1d13U;
+    __Vtable3_quadra_top__DOT__c_lut[32] = 0x1c95U;
+    __Vtable3_quadra_top__DOT__c_lut[33] = 0x1c18U;
+    __Vtable3_quadra_top__DOT__c_lut[34] = 0x1b9cU;
+    __Vtable3_quadra_top__DOT__c_lut[35] = 0x1b21U;
+    __Vtable3_quadra_top__DOT__c_lut[36] = 0x1aa6U;
+    __Vtable3_quadra_top__DOT__c_lut[37] = 0x1a2dU;
+    __Vtable3_quadra_top__DOT__c_lut[38] = 0x19b5U;
+    __Vtable3_quadra_top__DOT__c_lut[39] = 0x193eU;
+    __Vtable3_quadra_top__DOT__c_lut[40] = 0x18c8U;
+    __Vtable3_quadra_top__DOT__c_lut[41] = 0x1854U;
+    __Vtable3_quadra_top__DOT__c_lut[42] = 0x17e1U;
+    __Vtable3_quadra_top__DOT__c_lut[43] = 0x176fU;
+    __Vtable3_quadra_top__DOT__c_lut[44] = 0x16ffU;
+    __Vtable3_quadra_top__DOT__c_lut[45] = 0x1691U;
+    __Vtable3_quadra_top__DOT__c_lut[46] = 0x1624U;
+    __Vtable3_quadra_top__DOT__c_lut[47] = 0x15b8U;
+    __Vtable3_quadra_top__DOT__c_lut[48] = 0x154eU;
+    __Vtable3_quadra_top__DOT__c_lut[49] = 0x14e5U;
+    __Vtable3_quadra_top__DOT__c_lut[50] = 0x147dU;
+    __Vtable3_quadra_top__DOT__c_lut[51] = 0x1417U;
+    __Vtable3_quadra_top__DOT__c_lut[52] = 0x13b2U;
+    __Vtable3_quadra_top__DOT__c_lut[53] = 0x134fU;
+    __Vtable3_quadra_top__DOT__c_lut[54] = 0x12edU;
+    __Vtable3_quadra_top__DOT__c_lut[55] = 0x128dU;
+    __Vtable3_quadra_top__DOT__c_lut[56] = 0x122dU;
+    __Vtable3_quadra_top__DOT__c_lut[57] = 0x11cfU;
+    __Vtable3_quadra_top__DOT__c_lut[58] = 0x1173U;
+    __Vtable3_quadra_top__DOT__c_lut[59] = 0x1118U;
+    __Vtable3_quadra_top__DOT__c_lut[60] = 0x10beU;
+    __Vtable3_quadra_top__DOT__c_lut[61] = 0x1066U;
+    __Vtable3_quadra_top__DOT__c_lut[62] = 0x100fU;
+    __Vtable3_quadra_top__DOT__c_lut[63] = 0xfbaU;
+    __Vtable3_quadra_top__DOT__c_lut[64] = 0xf66U;
+    __Vtable3_quadra_top__DOT__c_lut[65] = 0xf13U;
+    __Vtable3_quadra_top__DOT__c_lut[66] = 0xec3U;
+    __Vtable3_quadra_top__DOT__c_lut[67] = 0xe74U;
+    __Vtable3_quadra_top__DOT__c_lut[68] = 0xe26U;
+    __Vtable3_quadra_top__DOT__c_lut[69] = 0xddaU;
+    __Vtable3_quadra_top__DOT__c_lut[70] = 0xd8fU;
+    __Vtable3_quadra_top__DOT__c_lut[71] = 0xd46U;
+    __Vtable3_quadra_top__DOT__c_lut[72] = 0xcfeU;
+    __Vtable3_quadra_top__DOT__c_lut[73] = 0xcb8U;
+    __Vtable3_quadra_top__DOT__c_lut[74] = 0xc74U;
+    __Vtable3_quadra_top__DOT__c_lut[75] = 0xc31U;
+    __Vtable3_quadra_top__DOT__c_lut[76] = 0xbefU;
+    __Vtable3_quadra_top__DOT__c_lut[77] = 0xbaeU;
+    __Vtable3_quadra_top__DOT__c_lut[78] = 0xb70U;
+    __Vtable3_quadra_top__DOT__c_lut[79] = 0xb33U;
+    __Vtable3_quadra_top__DOT__c_lut[80] = 0xaf7U;
+    __Vtable3_quadra_top__DOT__c_lut[81] = 0xabcU;
+    __Vtable3_quadra_top__DOT__c_lut[82] = 0xa83U;
+    __Vtable3_quadra_top__DOT__c_lut[83] = 0xa4bU;
+    __Vtable3_quadra_top__DOT__c_lut[84] = 0xa15U;
+    __Vtable3_quadra_top__DOT__c_lut[85] = 0x9e0U;
+    __Vtable3_quadra_top__DOT__c_lut[86] = 0x9adU;
+    __Vtable3_quadra_top__DOT__c_lut[87] = 0x97bU;
+    __Vtable3_quadra_top__DOT__c_lut[88] = 0x94aU;
+    __Vtable3_quadra_top__DOT__c_lut[89] = 0x91aU;
+    __Vtable3_quadra_top__DOT__c_lut[90] = 0x8ebU;
+    __Vtable3_quadra_top__DOT__c_lut[91] = 0x8bdU;
+    __Vtable3_quadra_top__DOT__c_lut[92] = 0x8f0U;
+    __Vtable3_quadra_top__DOT__c_lut[93] = 0x926U;
+    __Vtable3_quadra_top__DOT__c_lut[94] = 0x95dU;
+    __Vtable3_quadra_top__DOT__c_lut[95] = 0x996U;
+    __Vtable3_quadra_top__DOT__c_lut[96] = 0x9d1U;
+    __Vtable3_quadra_top__DOT__c_lut[97] = 0xa0dU;
+    __Vtable3_quadra_top__DOT__c_lut[98] = 0xa4aU;
+    __Vtable3_quadra_top__DOT__c_lut[99] = 0xa89U;
+    __Vtable3_quadra_top__DOT__c_lut[100] = 0xacaU;
+    __Vtable3_quadra_top__DOT__c_lut[101] = 0xb0dU;
+    __Vtable3_quadra_top__DOT__c_lut[102] = 0xb51U;
+    __Vtable3_quadra_top__DOT__c_lut[103] = 0xb97U;
+    __Vtable3_quadra_top__DOT__c_lut[104] = 0xbdeU;
+    __Vtable3_quadra_top__DOT__c_lut[105] = 0xc27U;
+    __Vtable3_quadra_top__DOT__c_lut[106] = 0xc71U;
+    __Vtable3_quadra_top__DOT__c_lut[107] = 0xcbdU;
+    __Vtable3_quadra_top__DOT__c_lut[108] = 0xd0bU;
+    __Vtable3_quadra_top__DOT__c_lut[109] = 0xd5bU;
+    __Vtable3_quadra_top__DOT__c_lut[110] = 0xdadU;
+    __Vtable3_quadra_top__DOT__c_lut[111] = 0xe01U;
+    __Vtable3_quadra_top__DOT__c_lut[112] = 0xe57U;
+    __Vtable3_quadra_top__DOT__c_lut[113] = 0xeafU;
+    __Vtable3_quadra_top__DOT__c_lut[114] = 0xf09U;
+    __Vtable3_quadra_top__DOT__c_lut[115] = 0xf66U;
+    __Vtable3_quadra_top__DOT__c_lut[116] = 0xfc4U;
+    __Vtable3_quadra_top__DOT__c_lut[117] = 0x23U;
+    __Vtable3_quadra_top__DOT__c_lut[118] = 0x85U;
+    __Vtable3_quadra_top__DOT__c_lut[119] = 0xe8U;
+    __Vtable3_quadra_top__DOT__c_lut[120] = 0x14eU;
+    __Vtable3_quadra_top__DOT__c_lut[121] = 0x1b6U;
+    __Vtable3_quadra_top__DOT__c_lut[122] = 0x21fU;
+    __Vtable3_quadra_top__DOT__c_lut[123] = 0x28bU;
+    __Vtable3_quadra_top__DOT__c_lut[124] = 0x2f8U;
+    __Vtable3_quadra_top__DOT__c_lut[125] = 0x368U;
+    __Vtable3_quadra_top__DOT__c_lut[126] = 0x2bU;
+    __Vtable3_quadra_top__DOT__c_lut[127] = 0xabU;
+    { int __Vi0=0; for (; __Vi0<3; ++__Vi0) {
+            __Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
+    }}
+}
